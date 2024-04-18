@@ -1,0 +1,98 @@
+{
+  "name": "rta-training-camp",
+  "version": "0.9.0",
+  "description": "NodeCG bundle for RTA training camp event",
+  "homepage": "https://github.com/cma2819/rta-training-camp#readme",
+  "author": "Cma",
+  "files": [
+    "dashboard",
+    "extension.js",
+    "extension"
+  ],
+  "keywords": [
+    "",
+    "nodecg-bundle"
+  ],
+  "nodecg": {
+    "compatibleRange": "^1.9.0||^2",
+    "dashboardPanels": [
+      {
+        "name": "scene-switch",
+        "title": "シーンスイッチャー",
+        "width": 3,
+        "file": "scene-switch.html",
+        "headerColor": "#bcbcff"
+      }
+    ],
+    "graphics": [
+      {
+        "file": "obs-control.html",
+        "width": 1920,
+        "height": 1080,
+        "singleInstance": true
+      }
+    ]
+  },
+  "main": "../../index.js",
+  "scripts": {
+    "autofix": "run-s autofix:*",
+    "autofix:browser": "eslint --fix --ext .ts,.vue src/browser",
+    "autofix:extension": "eslint --fix --ext .ts src/extension",
+    "build": "run-s build:*",
+    "build:dashboard": "vite build",
+    "build:extension": "tsc -b src/extension/",
+    "clean": "trash dashboard extension shared",
+    "dev": "run-p dev:*",
+    "dev:dashboard": "vite",
+    "dev:extension": "tsc -b src/extension/ -w",
+    "start": "node ../..",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "schema-types": "nodecg schema-types -o src/nodecg/generated schemas",
+    "schema-lib-types": "nodecg schema-types -o src/nodecg/generated --no-config-schema schemas/lib",
+    "schema-ext-types": "nodecg schema-types -o src/nodecg/external/speedcontrol --no-config-schema ../nodecg-speedcontrol/schemas"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cma2819/speedcontrol-additions.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cma2819/speedcontrol-additions/issues"
+  },
+  "devDependencies": {
+    "@types/clone": "^0.1.30",
+    "@types/lodash": "^4.14.202",
+    "@types/node": "^18.19.4",
+    "@types/obs-studio": "^2.17.2",
+    "@types/react-dom": "^18.2.18",
+    "@types/uuid": "^3.4.9",
+    "@typescript-eslint/eslint-plugin": "^6.16.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.56.0",
+    "eslint-config-standard-with-typescript": "^43.0.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.6.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.33.2",
+    "globby": "^14.0.0",
+    "nodecg": "^2.1.12",
+    "npm-run-all": "^4.1.5",
+    "trash-cli": "^3.1.0",
+    "ts-nodecg": "^0.3.1",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.10"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@fortawesome/fontawesome-free": "^6.5.1",
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-brands-svg-icons": "^6.5.1",
+    "@mui/icons-material": "^5.15.3",
+    "@mui/material": "^5.15.3",
+    "clone": "^2.1.2",
+    "googleapis": "^47.0.0",
+    "lodash": "^4.17.21",
+    "uuid": "^7.0.3"
+  }
+}

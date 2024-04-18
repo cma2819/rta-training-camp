@@ -1,0 +1,21 @@
+{
+  "_render-aZ6sAb25.js": {
+    "file": "render-aZ6sAb25.js"
+  },
+  "src/browser/dashboard/pages/scene-switch.tsx": {
+    "file": "scene-switch--A5xKIb3.js",
+    "imports": [
+      "_render-aZ6sAb25.js"
+    ],
+    "isEntry": true,
+    "src": "src/browser/dashboard/pages/scene-switch.tsx"
+  },
+  "src/browser/graphics/pages/obs-control.tsx": {
+    "file": "obs-control-G_aP3dWy.js",
+    "imports": [
+      "_render-aZ6sAb25.js"
+    ],
+    "isEntry": true,
+    "src": "src/browser/graphics/pages/obs-control.tsx"
+  }
+}

@@ -1,0 +1,9 @@
+services:
+  rta-tranining-camp:
+    image: ghcr.io/nodecg/nodecg:latest
+    volumes:
+      - ".:/opt/nodecg/bundles/rta-training-camp"
+      - ./cfg:/opt/nodecg/cfg
+      - ./db:/opt/nodecg/db
+    ports:
+      - "9090:9090"
